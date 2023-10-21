@@ -24,7 +24,8 @@
     "devDependencies": {
         "connect": "^3.7.0",
         "hogan.js": "2.0.0",
-        "recess": "1.1.9"
+        "less": "^1.7.5",
+        "recess": "1.1.8"
     },
     "dependencies": {
         "jshint": "^0.9.1",
