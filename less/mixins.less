@@ -413,6 +413,12 @@
   border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
 }
 
+.selectionBackground(@primaryColor, @textColor: #fff) {
+  .gradientBar(fade(lighten(@primaryColor, 10%), 50%), fade(@primaryColor, 25%), @textColor, none);
+  background-color: transparent;
+  border: 1px solid fade(@primaryColor, 50%);
+}
+
 // Gradients
 #gradient {
   .horizontal(@startColor: #555, @endColor: #333) {
@@ -501,8 +507,8 @@
   // to negative-margin away, but so it goes.
   *width: 100%;
   height: 1px;
-  margin: ((@baseLineHeight / 2) - 1) 1px; // 8px 1px
-  *margin: -5px 0 5px;
+  margin: ((@baseLineHeight / 4) - 1) 1px; // 8px 1px
+  *margin: -2px 0 2px;
   overflow: hidden;
   background-color: @top;
   border-bottom: 1px solid @bottom;

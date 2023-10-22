@@ -46,7 +46,7 @@
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: 160px;
-  padding: 5px 0;
+  padding: 4px 0;
   margin: 2px 0 0; // override default ul
   list-style: none;
   background-color: @dropdownBackground;
@@ -55,7 +55,7 @@
   *border-right-width: 2px;
   *border-bottom-width: 2px;
   .border-radius(6px);
-  .box-shadow(0 5px 10px rgba(0,0,0,.2));
+  .box-shadow(0 1px 2px rgba(0,0,0,.5));
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
@@ -74,12 +74,13 @@
   // Links within the dropdown menu
   > li > a {
     display: block;
-    padding: 3px 20px;
+    padding: 0 calc(@baseLineHeight / 2);
     clear: both;
     font-weight: normal;
     line-height: @baseLineHeight;
     color: @dropdownLinkColor;
     white-space: nowrap;
+    border: 1px solid transparent;
   }
 }
 
@@ -91,7 +92,7 @@
 .dropdown-submenu:focus > a {
   text-decoration: none;
   color: @dropdownLinkColorHover;
-  #gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%));
+  .selectionBackground(@dropdownLinkBackgroundHover, #fff);
 }
 
 // Active state

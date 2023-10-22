@@ -37,7 +37,7 @@ build:
 	@echo "ASCICL2 successfully built at ${DATE}."
 	@echo "${HR}\n"
 	@echo "Thanks for using ASCICL!"
-	@echo "ASCICL2 built by nulcow, based on Twitter Bootstrap 2.0 by @mdo and @fat."
+	@echo "ASCICL2 built by nulcow, based on Twitter Bootstrap 2.3.2 by @mdo and @fat."
 
 #
 # RUN JSHINT & QUNIT TESTS IN PHANTOMJS

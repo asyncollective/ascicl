@@ -27,7 +27,10 @@
   padding: 4px 12px;
   line-height: @baseLineHeight;
   text-decoration: none;
-  background-color: @paginationBackground;
+  .gradientBar(fade(#fff, 10%), fade(#fff, 5%));
+  .box-shadow(inset 0 1px 0 fade(#fff, 10%));
+  background-color: transparent;
+  color: @linkColor;
   border: 1px solid @paginationBorder;
   border-left-width: 0;
 }
@@ -35,7 +38,7 @@
 .pagination ul > li > a:focus,
 .pagination ul > .active > a,
 .pagination ul > .active > span {
-  background-color: @paginationActiveBackground;
+  .selectionBackground(@linkColor, #fff);
 }
 .pagination ul > .active > a,
 .pagination ul > .active > span {

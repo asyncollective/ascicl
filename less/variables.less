@@ -81,16 +81,16 @@
 
 // Tables
 // -------------------------
-@tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             darken(@grayLight, 5%); // for striping
+@tableBackground:                   lighten(@gray, 5%); // overall background-color
+@tableBackgroundAccent:             lighten(@gray, 10%); // for striping
 @tableBackgroundHover:              @grayLighter; // for hover
-@tableBorder:                       #ddd; // table and cell border
+@tableBorder:                       @grayDark; // table and cell border
 
 // Buttons
 // -------------------------
-@btnBackground:                     fade(@white, 50%);
-@btnBackgroundHighlight:            fade(@white, 10%);
-@btnBorder:                         @grayDarker;
+@btnBackground:                     fade(@white, 10%);
+@btnBackgroundHighlight:            fade(@white, 0%);
+@btnBorder:                         fade(@black, 25%);
 
 @btnPrimaryBackground:              @linkColor;
 @btnPrimaryBackgroundHighlight:     darken(spin(@btnPrimaryBackground, 10%), 10%);
@@ -113,8 +113,8 @@
 
 // Forms
 // -------------------------
-@inputBackground:               @grayDarker;
-@inputBorder:                   #ccc;
+@inputBackground:               @grayDark;
+@inputBorder:                   @grayDarker;
 @inputBorderRadius:             @baseBorderRadius;
 @inputDisabledBackground:       @grayLighter;
 @formActionsBackground:         #f5f5f5;
@@ -123,10 +123,10 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @grayLight;
+@dropdownBackground:            @gray;
 @dropdownBorder:                rgba(0,0,0,.2);
-@dropdownDividerTop:            #e5e5e5;
-@dropdownDividerBottom:         @white;
+@dropdownDividerTop:            @grayDark;
+@dropdownDividerBottom:         @grayDarker;
 
 @dropdownLinkColor:             #ccc;
 @dropdownLinkColorHover:        @white;
@@ -166,7 +166,7 @@
 
 // Hr border color
 // -------------------------
-@hrBorder:                @grayLighter;
+@hrBorder:                @grayLight;
 
 
 // Horizontal forms & lists
@@ -185,23 +185,23 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    30px;
-@navbarBackgroundHighlight:       #ffffff;
-@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
-@navbarBorder:                    darken(@navbarBackground, 12%);
+@navbarBackgroundHighlight:       fade(#ffffff, 50%);
+@navbarBackground:                fade(#fff, 35%);
+@navbarBorder:                    fade(#000, 25%);
 
-@navbarText:                      #333;
-@navbarLinkColor:                 #333;
+@navbarText:                      #000;
+@navbarLinkColor:                 #000;
 @navbarLinkColorHover:            #555;
 @navbarLinkColorActive:           #222;
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+@navbarLinkBackgroundActive:      darken(@navbarBackground, 25%);
 
 @navbarBrandColor:                @navbarLinkColor;
 
 // Inverted navbar
-@navbarInverseBackground:                @grayDark;
-@navbarInverseBackgroundHighlight:       @gray;
-@navbarInverseBorder:                    #252525;
+@navbarInverseBackground:                fade(@grayDark, 35%);
+@navbarInverseBackgroundHighlight:       fade(@gray, 50%);
+@navbarInverseBorder:                    fade(#000, 25%);
 
 @navbarInverseText:                      #ccc;
 @navbarInverseLinkColor:                 #ccc;
@@ -258,9 +258,9 @@
 @tooltipArrowWidth:       5px;
 @tooltipArrowColor:       @tooltipBackground;
 
-@popoverBackground:       #fff;
+@popoverBackground:       fade(#000, 50%);
 @popoverArrowWidth:       10px;
-@popoverArrowColor:       #fff;
+@popoverArrowColor:       @linkColor;
 @popoverTitleBackground:  darken(@popoverBackground, 3%);
 
 // Special enhancement for popovers

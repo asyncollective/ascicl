@@ -25,14 +25,14 @@ legend {
   margin-bottom: @baseLineHeight;
   font-size: @baseFontSize * 1.5;
   line-height: @baseLineHeight * 2;
-  color: @grayDark;
+  color: #ccc;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 
   // Small
   small {
     font-size: @baseLineHeight * .75;
-    color: @grayLight;
+    color: #aaa;
   }
 }
 
@@ -84,7 +84,7 @@ input[type="color"],
   margin-bottom: @baseLineHeight / 2;
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
-  color: @gray;
+  color: @white;
   .border-radius(@inputBorderRadius);
   vertical-align: middle;
 }
@@ -460,9 +460,9 @@ select:focus:invalid {
     font-weight: normal;
     line-height: @baseLineHeight;
     text-align: center;
-    text-shadow: 0 1px 0 @white;
-    background-color: @grayLighter;
-    border: 1px solid #ccc;
+    text-shadow: 0 -1px 0 fade(@black, 50%);
+    background-color: @grayLight;
+    border: 1px solid @grayDark;
   }
   .add-on,
   .btn,
