@@ -21,8 +21,7 @@
 .nav > li:not(.disabled) > a:hover,
 .nav > li:not(.disabled) > a:focus {
   text-decoration: none;
-  .gradientBar(fade(#fff, 5%), fade(#fff, 0%), #fff, 0 -1px 0 rgba(0,0,0,.25));
-  .box-shadow(inset 0 1px 0 rgba(255,255,255,.1));
+  .gradientBar(fade(#fff, 7.5%), fade(#fff, 5%), #fff, 0 -1px 0 rgba(0,0,0,.25));
   background-color: transparent;
   border: 1px solid transparent;
 }
@@ -128,6 +127,7 @@
   padding-bottom: 2px;
   line-height: @baseLineHeight;
   border: 1px solid transparent;
+  border-right: 1px solid grey;
   .border-radius(4px 4px 0 0);
   /*clip-path: polygon(~"calc(0% + 12px)" 0%, ~"calc(100% - 12px)" 0%, 100% 100%, 0% 100%);
   padding-left: 24px;
@@ -135,10 +135,10 @@
   &:hover,
   &:focus {
     .gradientBar(fade(#fff, 5%), fade(#fff, 0%), #fff, 0 -1px 0 rgba(0,0,0,.25));
-    .box-shadow(inset 0 1px 0 rgba(255,255,255,.1));
     background-color: transparent;
-    border-color: fade(black, 25%);
+    border: 1px solid transparent;
     border-bottom: 1px solid @bodyBackground;
+    border-right: 1px solid grey;
   }
 }
 // Active state, and it's :hover/:focus to override normal :hover/:focus
@@ -146,8 +146,8 @@
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
   color: @white;
-  .gradientBar(fade(#fff, 20%), fade(#fff, 0%), #fff, 0 -1px 0 rgba(0,0,0,.25));
-  .box-shadow(inset 0 1px 0 rgba(255,255,255,.25));
+  .gradientBar(fade(#fff, 10%), fade(#fff, 0%), #fff, 0 -1px 0 rgba(0,0,0,.25));
+  .box-shadow(0 0 2px fade(#000, 25%));
   background-color: transparent;
   border: 1px solid fade(black, 25%);
   border-bottom: 1px solid @bodyBackground;
@@ -194,7 +194,8 @@
   border-bottom: 0;
 }
 .nav-tabs.nav-stacked > li > a {
-  border: 1px solid #ddd;
+  border: 1px solid fade(@black, 25%);
+  background-color: @grayLight;
   .border-radius(0);
 }
 .nav-tabs.nav-stacked > li:first-child > a {
@@ -205,7 +206,7 @@
 }
 .nav-tabs.nav-stacked > li > a:hover,
 .nav-tabs.nav-stacked > li > a:focus {
-  border-color: #ddd;
+  .selectionBackground(@linkColor);
   z-index: 2;
 }
 
@@ -374,6 +375,8 @@
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
   .border-radius(4px 0 0 4px);
+  border-bottom: 1px solid grey;
+  border-right-color: transparent;
 }
 .tabs-left > .nav-tabs > li > a:hover,
 .tabs-left > .nav-tabs > li > a:focus {
@@ -395,6 +398,8 @@
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
   .border-radius(0 4px 4px 0);
+  border-bottom: 1px solid grey;
+  border-right-color: transparent;
 }
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {

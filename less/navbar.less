@@ -26,7 +26,7 @@
   background-color: transparent;
   border: 1px solid @navbarBorder;
   .border-radius(@baseBorderRadius);
-  .box-shadow(~"0 1px 2px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.35), inset 0 0 1px rgba(255,255,255,.25)");
+  .box-shadow(~"0 1px 2px rgba(0,0,0,.5), inset 0 0 1px rgba(255,255,255,.25)");
   /*backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);*/
 
@@ -143,17 +143,26 @@
 .navbar-search {
   position: relative;
   float: left;
-  .navbarVerticalAlign(30px); // Vertically center in navbar
+  .navbarVerticalAlign(22px); // Vertically center in navbar
   margin-bottom: 0;
   .search-query {
     margin-bottom: 0;
-    padding: 4px 14px;
+    padding: 0 8px;
     #font > .sans-serif(13px, normal, 1);
     .border-radius(15px); // redeclare because of specificity of the type attribute
   }
 }
 
+.navbar-inner input {
+  padding: 0 4px;
+  font-size: 12px;
+  .navbarVerticalAlign(22px);
+}
 
+.navbar-inner .btn {
+  padding: 0 4px;
+  .navbarVerticalAlign(22px);
+}
 
 // Static navbar
 // -------------------------
