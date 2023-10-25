@@ -1,59 +1,10 @@
-# [Bootstrap v2.3.2](http://twbs.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twbs/bootstrap.png)](http://travis-ci.org/twbs/bootstrap)
+# [ASCICL v2.1.1](http://asyncollective.org/index.php?pname=ascicl)
 
-Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created and maintained by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat).
-
-To get started, checkout [http://getbootstrap.com](http://getbootstrap.com)!
-
-
-
-## Quick start
-
-Three quick start options are available:
-
-* [Download the latest release](https://github.com/twbs/bootstrap/zipball/master).
-* Clone the repo: `git clone git://github.com/twbs/bootstrap.git`.
-* Install with Twitter's [Bower](http://bower.io): `bower install bootstrap`.
-
-
-
-## Versioning
-
-For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
-
-Releases will be numbered with the following format:
-
-`<major>.<minor>.<patch>`
-
-And constructed with the following guidelines:
-
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
-
-For more information on SemVer, please visit [http://semver.org/](http://semver.org/).
-
-
-
-## Bug tracker
-
-Have a bug or a feature request? [Please open a new issue](https://github.com/twbs/bootstrap/issues). Before opening any issue, please search for existing issues and read the [Issue Guidelines](https://github.com/necolas/issue-guidelines), written by [Nicolas Gallagher](https://github.com/necolas/).
-
-
-
-## Community
-
-Keep track of development and community news.
-
-* Follow [@twbootstrap on Twitter](http://twitter.com/twbootstrap).
-* Read and subscribe to the [The Official Twitter Bootstrap Blog](http://blog.getbootstrap.com).
-* Have a question that's not a feature request or bug report? [Ask on the mailing list.](http://groups.google.com/group/twitter-bootstrap)
-* Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##twitter-bootstrap` channel.
-
-
+ASCICL is an internal UI framework for use at the asyncollective. It ensures consistency across asyncollective websites and provides a good specification for our design sensibilities. It is based on Bootstrap v2.3.2.
 
 ## Compiling CSS and JavaScript
 
-Bootstrap includes a [makefile](Makefile) with convenient methods for working with the framework. Before getting started, be sure to install [the necessary local dependencies](package.json):
+ASCICL includes a [makefile](Makefile) with convenient methods for working with the framework. Before getting started, be sure to install [the necessary local dependencies](package.json):
 
 ```
 $ npm install
@@ -62,7 +13,7 @@ $ npm install
 When completed, you'll be able to run the various make commands provided:
 
 #### build - `make`
-Runs the recess compiler to rebuild the `/less` files and compiles the docs. Requires recess and uglify-js.
+Runs the LessC (not Recess because that generates blank code for some reason) compiler to rebuild the `/less` files and compiles the docs. Requires Less.js and uglify-js.
 
 #### test - `make test`
 Runs jshint and qunit tests headlessly in [phantomjs](http://code.google.com/p/phantomjs/) (used for ci). Depends on having phantomjs installed.
@@ -72,17 +23,10 @@ This is a convenience method for watching just Less files and automatically buil
 
 Should you encounter problems with installing dependencies or running the makefile commands, be sure to first uninstall any previous versions (global and local) you may have installed, and then rerun `npm install`.
 
+## About Bootstrap
+Go to the [Bootstrap website](http://getbootstrap.com/2.3.2/) for more information about Bootstrap, the wonderful framework ASCICL 2 and later versions are based on.
 
-
-## Contributing
-
-Please submit all pull requests against *-wip branches. If your pull request contains JavaScript patches or features, you must include relevant unit tests. All HTML and CSS should conform to the [Code Guide](http://github.com/mdo/code-guide), maintained by [Mark Otto](http://github.com/mdo).
-
-Thanks!
-
-
-
-## Authors
+## Original Authors
 
 **Mark Otto**
 
