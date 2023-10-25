@@ -1,4 +1,4 @@
-# [ASCICL v2.1.1](http://asyncollective.org/index.php?pname=ascicl)
+# [ASCICL v3](http://asyncollective.org/index.php?pname=ascicl)
 
 ASCICL is an internal UI framework for use at the asyncollective. It ensures consistency across asyncollective websites and provides a good specification for our design sensibilities. It is based on Bootstrap v2.3.2.
 
