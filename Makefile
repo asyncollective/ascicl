@@ -68,38 +68,38 @@ ascicl: bootstrap-img bootstrap-css bootstrap-js
 #
 # JS COMPILE
 #
-bootstrap-js: ascicl/js/*.js
+bootstrap-js: dist/js/*.js
 
-ascicl/js/*.js: js/*.js
-	mkdir -p ascicl/js
-	cat js/bootstrap-transition.js js/bootstrap-alert.js js/bootstrap-button.js js/bootstrap-carousel.js js/bootstrap-collapse.js js/bootstrap-dropdown.js js/bootstrap-modal.js js/bootstrap-tooltip.js js/bootstrap-popover.js js/bootstrap-scrollspy.js js/bootstrap-tab.js js/bootstrap-typeahead.js js/bootstrap-affix.js > ascicl/js/ascicl2.js
-	./node_modules/.bin/uglifyjs -nc ascicl/js/ascicl2.js > ascicl/js/ascicl2.min.tmp.js
-	echo "/*!\n* Bootstrap.js by @fat & @mdo\n* Copyright 2013 Twitter, Inc.\n* http://www.apache.org/licenses/LICENSE-2.0.txt\n*/" > ascicl/js/copyright.js
-	cat ascicl/js/copyright.js ascicl/js/ascicl2.min.tmp.js > ascicl/js/ascicl2.min.js
-	rm ascicl/js/copyright.js ascicl/js/ascicl2.min.tmp.js
+dist/js/*.js: js/*.js
+	mkdir -p dist/js
+	cat js/bootstrap-transition.js js/bootstrap-alert.js js/bootstrap-button.js js/bootstrap-carousel.js js/bootstrap-collapse.js js/bootstrap-dropdown.js js/bootstrap-modal.js js/bootstrap-tooltip.js js/bootstrap-popover.js js/bootstrap-scrollspy.js js/bootstrap-tab.js js/bootstrap-typeahead.js js/bootstrap-affix.js > dist/js/ascicl2.js
+	./node_modules/.bin/uglifyjs -nc dist/js/ascicl2.js > dist/js/ascicl2.min.tmp.js
+	echo "/*!\n* Bootstrap.js by @fat & @mdo\n* Copyright 2013 Twitter, Inc.\n* http://www.apache.org/licenses/LICENSE-2.0.txt\n*/" > dist/js/copyright.js
+	cat dist/js/copyright.js dist/js/ascicl2.min.tmp.js > dist/js/ascicl2.min.js
+	rm dist/js/copyright.js dist/js/ascicl2.min.tmp.js
 
 #
 # CSS COMPLILE
 #
 
-bootstrap-css: ascicl/css/*.css
+bootstrap-css: dist/css/*.css
 
-ascicl/css/*.css: less/*.less
-	mkdir -p ascicl/css
-	./node_modules/.bin/lessc ${BOOTSTRAP_LESS} > ascicl/css/ascicl2.css
-	./node_modules/.bin/recess --compress ${BOOTSTRAP_LESS} > ascicl/css/ascicl2.min.css
-	./node_modules/.bin/lessc ${BOOTSTRAP_RESPONSIVE_LESS} > ascicl/css/ascicl2-responsive.css
-	./node_modules/.bin/recess --compress ${BOOTSTRAP_RESPONSIVE_LESS} > ascicl/css/ascicl2-responsive.min.css
+dist/css/*.css: less/*.less
+	mkdir -p dist/css
+	./node_modules/.bin/lessc ${BOOTSTRAP_LESS} > dist/css/ascicl2.css
+	./node_modules/.bin/recess --compress ${BOOTSTRAP_LESS} > dist/css/ascicl2.min.css
+	./node_modules/.bin/lessc ${BOOTSTRAP_RESPONSIVE_LESS} > dist/css/ascicl2-responsive.css
+	./node_modules/.bin/recess --compress ${BOOTSTRAP_RESPONSIVE_LESS} > dist/css/ascicl2-responsive.min.css
 
 #
 # IMAGES
 #
 
-bootstrap-img: ascicl/img/*
+bootstrap-img: dist/img/*
 
-ascicl/img/*: img/*
-	mkdir -p ascicl/img
-	cp img/* ascicl/img/
+dist/img/*: img/*
+	mkdir -p dist/img
+	cp img/* dist/img/
 
 #
 # WATCH LESS FILES
