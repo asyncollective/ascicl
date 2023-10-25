@@ -2425,9 +2425,9 @@ table th[class*="span"],
   padding: 4px 0;
   margin: 2px 0 0;
   list-style: none;
-  background-color: #2b2e33;
+  background-color: rgba(0, 0, 0, 0.75);
   border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   *border-right-width: 2px;
   *border-bottom-width: 2px;
   -webkit-border-radius: 6px;
@@ -2574,7 +2574,7 @@ table th[class*="span"],
   border-color: transparent;
   border-style: solid;
   border-width: 5px 0 5px 5px;
-  border-left-color: #000000;
+  border-left-color: rgba(0, 0, 0, 0.75);
   margin-top: 5px;
   margin-right: -10px;
 }
@@ -3236,7 +3236,7 @@ input[type="submit"].btn.btn-mini {
 .btn-danger .caret,
 .btn-info .caret,
 .btn-success .caret,
-.btn-inverse .caret {
+.btn .caret {
   border-top-color: #ffffff;
   border-bottom-color: #ffffff;
 }
@@ -3771,6 +3771,8 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-inner {
   min-height: 30px;
+  height: 30px;
+  max-height: 30px;
   padding-left: 20px;
   padding-right: 20px;
   background-color: rgba(255, 255, 255, 0.44);
@@ -3978,7 +3980,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li > a {
   float: none;
-  padding: 5px 15px 5px;
+  padding: 4px 15px 4px;
   color: #000000;
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -4062,7 +4064,7 @@ input[type="submit"].btn.btn-mini {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-bottom: 7px solid #ccc;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
   position: absolute;
   top: -7px;
   left: 9px;
@@ -4072,20 +4074,20 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-bottom: 6px solid #2b2e33;
+  border-bottom: 6px solid rgba(0, 0, 0, 0.75);
   position: absolute;
   top: -6px;
   left: 10px;
 }
 .navbar-fixed-bottom .nav > li > .dropdown-menu:before {
   border-top: 7px solid #ccc;
-  border-top-color: rgba(0, 0, 0, 0.2);
+  border-top-color: rgba(255, 255, 255, 0.2);
   border-bottom: 0;
   bottom: -7px;
   top: auto;
 }
 .navbar-fixed-bottom .nav > li > .dropdown-menu:after {
-  border-top: 6px solid #2b2e33;
+  border-top: 6px solid rgba(0, 0, 0, 0.75);
   border-bottom: 0;
   bottom: -6px;
   top: auto;
