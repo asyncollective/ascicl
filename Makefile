@@ -73,10 +73,10 @@ bootstrap-js: ascicl/js/*.js
 ascicl/js/*.js: js/*.js
 	mkdir -p ascicl/js
 	cat js/bootstrap-transition.js js/bootstrap-alert.js js/bootstrap-button.js js/bootstrap-carousel.js js/bootstrap-collapse.js js/bootstrap-dropdown.js js/bootstrap-modal.js js/bootstrap-tooltip.js js/bootstrap-popover.js js/bootstrap-scrollspy.js js/bootstrap-tab.js js/bootstrap-typeahead.js js/bootstrap-affix.js > ascicl/js/ascicl2.js
-	./node_modules/.bin/uglifyjs -nc ascicl/js/ascicl2.js > ascicl/js/bootstrap.min.tmp.js
+	./node_modules/.bin/uglifyjs -nc ascicl/js/ascicl2.js > ascicl/js/ascicl2.min.tmp.js
 	echo "/*!\n* Bootstrap.js by @fat & @mdo\n* Copyright 2013 Twitter, Inc.\n* http://www.apache.org/licenses/LICENSE-2.0.txt\n*/" > ascicl/js/copyright.js
-	cat ascicl/js/copyright.js ascicl/js/bootstrap.min.tmp.js > ascicl/js/bootstrap.min.js
-	rm ascicl/js/copyright.js ascicl/js/bootstrap.min.tmp.js
+	cat ascicl/js/copyright.js ascicl/js/ascicl2.min.tmp.js > ascicl/js/ascicl2.min.js
+	rm ascicl/js/copyright.js ascicl/js/ascicl2.min.tmp.js
 
 #
 # CSS COMPLILE
