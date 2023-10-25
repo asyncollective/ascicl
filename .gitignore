@@ -34,4 +34,4 @@ nbproject
 .CVS
 .idea
 node_modules
-dist
+#dist don't ignore dist folder. This is so that JSDelivr can serve dist files from GitHub
