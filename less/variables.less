@@ -232,19 +232,19 @@
 
 // Form states and alerts
 // -------------------------
-@warningText:             darken(@yellow, 20%);
+@warningText:             lighten(@yellow, 20%);
 @warningBackground:       mix(@orange, @bodyBackground);
 @warningBorder:           darken(spin(@warningBackground, -10), 3%);
 
-@errorText:               @red;
+@errorText:               lighten(@red, 20%);
 @errorBackground:         mix(@red, @bodyBackground);
 @errorBorder:             darken(spin(@errorBackground, -10), 3%);
 
-@successText:             @green;
+@successText:             lighten(@green, 20%);
 @successBackground:       mix(@green, @bodyBackground);
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 
-@infoText:                darken(@blue, 35%);
+@infoText:                @blue;
 @infoBackground:          mix(@blue, @bodyBackground);
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
