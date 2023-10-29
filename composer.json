@@ -1,6 +1,6 @@
 {
-  "name": "twbs/bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "asyncollective/ascicl",
+  "description": "Internal UI framework at the asyncollective, based on Bootstrap 4.6.2",
   "keywords": [
     "css",
     "js",
@@ -11,7 +11,7 @@
     "framework",
     "web"
   ],
-  "homepage": "https://getbootstrap.com/",
+  "homepage": "https://asyncollective.org/project.php?pname=ascicl",
   "authors": [
     {
       "name": "Mark Otto",
@@ -20,10 +20,14 @@
     {
       "name": "Jacob Thornton",
       "email": "jacobthornton@gmail.com"
+    },
+    {
+      "name": "nulcow",
+      "email": "nulcow@asyncollective.org"
     }
   ],
   "support": {
-    "issues": "https://github.com/twbs/bootstrap/issues"
+    "issues": "https://github.com/asyncollective/ascicl/issues"
   },
   "license": "MIT",
   "extra": {

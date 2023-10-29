@@ -7,7 +7,7 @@ const banner = require('./banner.js')
 
 const BUNDLE = process.env.BUNDLE === 'true'
 
-let fileDest = 'bootstrap.js'
+let fileDest = 'ascicl.js'
 const external = ['jquery', 'popper.js']
 const plugins = [
   babel({
@@ -23,7 +23,7 @@ const globals = {
 }
 
 if (BUNDLE) {
-  fileDest = 'bootstrap.bundle.js'
+  fileDest = 'ascicl.bundle.js'
   // Remove last entry in external array to bundle Popper
   external.pop()
   delete globals['popper.js']

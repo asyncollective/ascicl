@@ -15,18 +15,18 @@ const sh = require('shelljs')
 const pkg = require('../package.json')
 
 const versionShort = pkg.config.version_short
-const distFolder = `bootstrap-${pkg.version}-examples`
+const distFolder = `ascicl-${pkg.version}-examples`
 const rootDocsDir = '_site'
 const docsDir = `${rootDocsDir}/docs/${versionShort}/`
 
 // these are the files we need in the examples
 const cssFiles = [
-  'bootstrap.min.css',
-  'bootstrap.min.css.map'
+  'ascicl.min.css',
+  'ascicl.min.css.map'
 ]
 const jsFiles = [
-  'bootstrap.bundle.min.js',
-  'bootstrap.bundle.min.js.map'
+  'ascicl.bundle.min.js',
+  'ascicl.bundle.min.js.map'
 ]
 const imgFiles = [
   'bootstrap-outline.svg',

@@ -1,9 +1,9 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "4.6.2",
+  "name": "ascicl",
+  "description": "Internal UI framework at the asyncollective, based on Bootstrap 4.6.2",
+  "version": "4.0.0",
   "config": {
-    "version_short": "4.6"
+    "version_short": "4.0"
   },
   "keywords": [
     "css",
@@ -14,18 +14,19 @@
     "framework",
     "web"
   ],
-  "homepage": "https://getbootstrap.com/",
-  "author": "The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+  "homepage": "https://asyncollective.org/project.php?pname=ascicl",
+  "author": "nulcow",
   "contributors": [
-    "Twitter, Inc."
+    "ASCICL GitHub contributors",
+    "asyncollective, inc."
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/twbs/bootstrap.git"
+    "url": "git+https://github.com/asyncollective/ascicl.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/asyncollective/ascicl/issues"
   },
   "funding": [
     {
@@ -37,9 +38,9 @@
       "url": "https://opencollective.com/bootstrap"
     }
   ],
-  "main": "dist/js/bootstrap.js",
-  "sass": "scss/bootstrap.scss",
-  "style": "dist/css/bootstrap.css",
+  "main": "dist/js/ascicl.js",
+  "sass": "scss/ascicl.scss",
+  "style": "dist/css/ascicl.css",
   "scripts": {
     "start": "npm-run-all --parallel watch docs-serve",
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
@@ -60,8 +61,8 @@
     "js-compile-plugins-coverage": "cross-env NODE_ENV=test node build/build-plugins.js",
     "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "js-minify": "npm-run-all --aggregate-output --parallel js-minify-*",
-    "js-minify-standalone": "terser --compress passes=2,typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/bootstrap.js.map,includeSources,url=bootstrap.min.js.map\" --output dist/js/bootstrap.min.js dist/js/bootstrap.js",
-    "js-minify-bundle": "terser --compress passes=2,typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/bootstrap.bundle.js.map,includeSources,url=bootstrap.bundle.min.js.map\" --output dist/js/bootstrap.bundle.min.js dist/js/bootstrap.bundle.js",
+    "js-minify-standalone": "terser --compress passes=2,typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/ascicl.js.map,includeSources,url=ascicl.min.js.map\" --output dist/js/ascicl.min.js dist/js/ascicl.js",
+    "js-minify-bundle": "terser --compress passes=2,typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/ascicl.bundle.js.map,includeSources,url=ascicl.bundle.min.js.map\" --output dist/js/ascicl.bundle.min.js dist/js/ascicl.bundle.js",
     "js-test": "npm-run-all --aggregate-output --parallel js-test-karma* --serial js-test-integration",
     "js-test-karma": "karma start js/tests/karma.conf.js",
     "js-test-karma-old": "cross-env USE_OLD_JQUERY=true npm run js-test-karma",
@@ -82,7 +83,7 @@
     "release": "npm-run-all dist release-sri docs-build release-zip*",
     "release-sri": "node build/generate-sri.js",
     "release-version": "node build/change-version.js",
-    "release-zip": "cross-env-shell \"rm -rf bootstrap-$npm_package_version-dist && cp -r dist/ bootstrap-$npm_package_version-dist && zip -r9 bootstrap-$npm_package_version-dist.zip bootstrap-$npm_package_version-dist && rm -rf bootstrap-$npm_package_version-dist\"",
+    "release-zip": "cross-env-shell \"rm -rf ascicl-$npm_package_version-dist && cp -r dist/ ascicl-$npm_package_version-dist && zip -r9 ascicl-$npm_package_version-dist.zip ascicl-$npm_package_version-dist && rm -rf ascicl-$npm_package_version-dist\"",
     "release-zip-examples": "node build/zip-examples.js",
     "dist": "npm-run-all --aggregate-output --parallel css js",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
