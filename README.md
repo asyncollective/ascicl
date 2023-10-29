@@ -1,10 +1,8 @@
-<p align="center">
-  <a href="https://getbootstrap.com/">
-    <img src="https://getbootstrap.com/docs/4.6/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
-  </a>
-</p>
+<h3 align="center">ASCICL v4</h3>
 
-<h3 align="center">Bootstrap</h3>
+ASCICL is an internal UI framework for use at the asyncollective. It ensures consistency across asyncollective websites and provides a good specification for our design sensibilities. The current version is based on Bootstrap v4.6.2.
+
+## Original README (from Bootstrap 4.6.2)
 
 <p align="center">
   Sleek, intuitive, and powerful front-end framework for faster and easier web development.
