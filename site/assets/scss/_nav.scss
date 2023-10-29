@@ -65,7 +65,7 @@
 
   .dropdown-item.active {
     font-weight: 600;
-    color: $gray-900;
+    color: $grey-dark;
     background: escape-svg($dropdown-active-icon) no-repeat .4rem .6rem/.75rem .75rem;
   }
 }

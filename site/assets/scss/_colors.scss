@@ -9,7 +9,7 @@
   }
 }
 
-@each $color, $value in $grays {
+@each $color, $value in $greys {
   .swatch-#{$color} {
     color: color-yiq($value);
     background-color: #{$value};

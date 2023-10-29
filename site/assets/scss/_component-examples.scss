@@ -89,7 +89,7 @@
   position: relative;
   padding: 1rem;
   margin: 1rem (-$grid-gutter-width * .5) 0;
-  border: solid $gray-100;
+  border: solid $grey-darker;
   border-width: .2rem 0 0;
   @include clearfix();
 
@@ -341,7 +341,7 @@
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  background-color: $gray-100;
+  background-color: $grey-darker;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 
   @include media-breakpoint-up(sm) {
@@ -369,6 +369,6 @@
   }
   pre code {
     @include font-size(inherit);
-    color: $gray-900; // Effectively the base text color
+    color: $grey-light; // Effectively the base text color
   }
 }
