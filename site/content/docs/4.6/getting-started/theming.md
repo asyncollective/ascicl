@@ -456,7 +456,7 @@ Here are the variables we include (note that the `:root` is required). They're l
 
 ```css
 {{< root.inline >}}
-{{- $css := readFile "dist/css/bootstrap.css" -}}
+{{- $css := readFile "dist/css/ascicl.css" -}}
 {{- $match := findRE ":root {([^}]*)}" $css 1 -}}
 
 {{- if (eq (len $match) 0) -}}
