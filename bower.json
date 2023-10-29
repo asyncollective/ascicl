@@ -1,8 +1,0 @@
-{
-  "name": "ascicl",
-  "version": "2.0.0",
-  "main": ["./docs/assets/js/ascicl2.js", "./docs/assets/css/ascicl2.css"],
-  "dependencies": {
-    "jquery": ">=1.8.0 <2.1.0"
-  }
-}
